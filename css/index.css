@@ -199,16 +199,17 @@
 }
 
 #container .lBox .card .linkmore{
-    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
     margin-top: 10px;
     text-align: center;
-    padding-left: 30px;
+    padding: 0 28px;
 }
 #container .lBox .card .linkmore li{
     float: left;
-    width:50px;
-    height: 50px;
-    margin: 5px;
+    width: 40px;
+    height: 40px;
     position: relative;
 }
 
@@ -216,8 +217,8 @@
     display: inline-block;
     width:100%;
     height: 100%;
-    font-size: 30px;
-    line-height: 50px;
+    font-size: 28px;
+    line-height: 40px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.1);
     transition: 0.3s;
@@ -235,15 +236,18 @@
     top: -110px;
     left: -25px;
     visibility: hidden;
-    width: 100px;
-    height: 100px;
+    width: 88px;
+    height: 88px;
+    padding: 5px;
     text-align: center;
     border-radius: 6px;
     overflow: hidden;
+    background-color: #fff;
 }
 #container .lBox .card .linkmore li .toolTipImage img{
-    width: 100px;
-    height: 100px;
+    width: 88px;
+    height: 88px;
+    border-radius: 6px;
 }
 
 /* <!-- 搜索和导航栏目 --> */
@@ -638,7 +642,7 @@
 
 
 
-/* ------------------------------------------------------------------- */
+/* ----底部部分--------------------------------------------------------------- */
 
 #footer::before{
     content: "";
@@ -659,22 +663,40 @@
 
 #footer{
     width: 100%;
-    height: 100px;
-    background-color: #373D41;
-    background-color: #fff;
+    background-color: #f4f4f4;
     position: relative;
-    bottom: 0px;
 }
-
-
 #footer .box{
-	clear: both;
-    height: 100px;
-    line-height: 100px;
+    clear: both;
 	margin: 20px auto 0px;
 	text-align: center;
-	color: #000;
+    color: rgb(58, 56, 56);
+    /* background-color: #ddd; */
 }
-#footer .box a {
-	color: #999;
+#footer .ftop{
+    padding: 15px 0 5px 0;
+}
+#footer .fbottom{
+    padding:5px 0 20px 0;
+}
+#footer .box div{
+    font-size: 13px;
+}
+#footer .box a{
+    font-size: 12px;
+    color: rgb(78, 70, 70);
+}
+#footer .box span{
+    margin: 3px;
+}
+#footer .box span.big{
+    color: black;
+    font-size: 14px;
+}
+#footer .box i{
+    padding: 1px;
+}
+#footer .box div.webRunTime{
+    color: black;
+    font-size: 14px;
 }
