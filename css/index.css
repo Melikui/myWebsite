@@ -64,16 +64,16 @@
 /* <!-- 标题部分 --> */
 #header .container .logo a {
     display: inline-block;
-    width: 220px;
+    width: 200px;
     height: 60px;
     background-image: url(../images/bluelogo.png);
-    background-size: 200px 50px;
+    /* 图片比例4:1 */
+    background-size: 180px 45px;  
     background-position: center;
     background-repeat: no-repeat;
     text-indent: -9999px;
     overflow: hidden;
 }
-
 
 /* <!-- 中间导航 --> */
 #header .container .navigation{
@@ -266,7 +266,7 @@
 }
 
 #container .lBox .search-nav .top input{
-    width: 190px;
+    width: 180px;
     height: 21px;
     border: 1px solid #999;
     border-radius: 6px;
@@ -275,19 +275,20 @@
     text-indent: 3px;
 }
 #container .lBox .search-nav .top .btn{
-    height: 29px;
-    padding: 2px 10px;
+    height: 31px;
+    padding: 2px 12px;
     border: none;
     outline: none;
     background-color: #fff;
+    border: 1px solid #ddd;
     color: #2988FF;
     font-weight: bold;
+    font-size: 15px;
     cursor: pointer;
     border-radius: 6px;
-    border: 1px solid #ddd;
     margin-left: 5px;
     position: relative;
-    top: 1px;
+    top: 1.5px;
 }
 #container .lBox .search-nav .top .btn:hover{
     background-color: #2988FF;
