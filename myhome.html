@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/xin.png">
+    <title>QQSHW</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+        /* 清除浮动 */
+       .clearfix::after {
+           content: "";
+           display: table;
+           clear: both;
+       }
+       
+
+         /*------ 底部样式------------------------------------------------------------------------ */
+       .footer {
+           background: #ddd;
+           font-size: 20px;
+           padding: 20px;
+           margin-top: 20px;
+           text-align: center;
+       }
+
+
+       /* ------头部标题--------------------------------------------------------------------------------------------------------------- */
+       .header {
+           background: white;
+           padding: 30px;
+           text-align: center;
+           color: black;
+       }
+       .header h1 {
+           font-size: 50px;
+           color: red;
+       }
+
+
+       /* ------导航条---------------------------------------------------------------------------------------------------------------- */
+       .topnav {
+           /* overflow: hidden; */
+           background-color: white;
+           border: 1px solid red;
+           position: relative;
+       }
+       /* 导航栏 */
+       .dropbtn{
+           background-color: rgb(69, 110, 221);
+           color: white;
+           padding: 10px;
+           font-size: 16px;
+           border: none;
+           cursor: pointer;
+           width: 100px;
+       }
+       .dropdown {
+           position: relative;
+           display: inline-block;
+       }
+       .dropdown-content {
+           display: none;
+           position: absolute;
+           background-color: #f9f9f9;
+           padding: 1px;
+           width: 100px;
+           box-shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);
+       }
+       .dropdown-content a {
+           color: black;
+           padding: 12px 16px;
+           text-decoration: none;
+           display: block;
+       }
+       .dropdown-content a:hover {background-color: #ddd;}
+       .dropdown:hover .dropdown-content {display: block;}
+       .dropdown:hover .dropbtn {background-color: #2611e2;}
+    
+    
+
+       /* ------创建两列-左侧栏leftcolumn ------------------------------------------------------------------------------------------*/
+       .leftcolumn {
+           float: left;
+           width: 75%;
+           /* border: 1px solid red; */
+       }
+
+       /* 创建两列-右侧栏rightcolumn */
+       .rightcolumn {
+           float: left;
+           width: 25%;
+           background-color: #f1f1f1;
+           padding-left: 20px;
+           /* border: 1px solid red; */
+       }
+
+       /* 图片部分 */
+       .fakeimg {
+           background-color: #aaa;
+           width: 100%;
+           padding: 20px;
+       }
+
+       /* 文章卡片效果 */
+       .card {
+           background-color: white;
+           padding: 20px;
+           margin-top: 20px;
+           border: 1px solid red;
+       }
+
+       
+
+       /* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+       @media screen and (max-width: 800px) {
+           .leftcolumn, .rightcolumn {
+               width: 100%;
+               padding: 0;
+           }
+       }
+       /* 响应式布局 - 屏幕尺寸小于 400px 时，两列布局改为上下布局 */
+       @media screen and (max-width: 400px) {
+           .topnav a {
+               float: none;
+               width: 100%;
+           }
+       }
+
+      
+       /* ------我的图片廊------------------------------------------------------------------------------------------ */
+       /* 图片部分 */
+       div.img {
+           border:1px solid #ccc;
+           margin: 5px;
+           float: left;
+           width: 23%;
+           
+       }
+       div.img:hover {border:1px solid #777}
+       div.img img {
+           width: 100%;
+           height: auto;
+       }
+       /* 文字部分 */
+       div.desc {
+           padding: 15px;
+           text-align: center;
+       }   
+       .responsive {
+           border: 1px solid red;
+           margin-top: 10px;
+           height: 500px;
+           width: 100%;
+           margin: auto;
+       }
+     
+
+
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- 头部区域 -->
+    <div class="header">
+        <h1>全全生活屋</h1>
+        <p>重置浏览器大小查看效果。</p>
+    </div>
+
+    <!-- 菜单导航区域 -->
+    <div class="topnav">
+        <div class="dropdown">
+            <button class="dropbtn">下拉菜单1</button>
+            <div class="dropdown-content">
+                <a href="">111</a>
+                <a href="#">链接A</a>
+                <a href="#">链接B</a>
+                <a href="#">链接C</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">下拉菜单2</button>
+            <div class="dropdown-content">
+                <a href="">222</a>
+                <a href="#">链接A</a>
+                <a href="#">链接B</a>
+                <a href="#">链接C</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">下拉菜单3</button>
+            <div class="dropdown-content">
+                <a href="">333</a>
+                <a href="#">链接A</a>
+                <a href="#">链接B</a>
+                <a href="#">链接C</a>
+            </div>
+        </div>
+        
+    </div>
+
+    内容区域
+    <div class="clearfix">
+       <div class="leftcolumn">
+           <div class="card">
+               <h2>文章标题</h2>
+               <h5>2020 年 4 月 9日</h5>
+               <div class="fakeimg" style="height:200px;">图片</div>
+               <p>一些文本...</p>
+               <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+           </div>
+           <div class="card">
+               <h2>文章标题</h2>
+               <h5>2020 年 4 月 9日</h5>
+               <div class="fakeimg" style="height:200px;">图片</div>
+               <p>一些文本...</p>
+               <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+           </div>
+       </div>
+       <div class="rightcolumn">
+           <div class="card">
+               <h2>关于我</h2>
+               <div class="fakeimg" style="height:100px;">图片</div>
+               <p>关于我的一些信息..</p>
+           </div>
+           <div class="card">
+               <h3>热门文章</h3>
+               <div class="fakeimg"><p>图片</p></div>
+               <div class="fakeimg"><p>图片</p></div>
+               <div class="fakeimg"><p>图片</p></div>
+           </div>
+           <div class="card">
+               <h3>关注我</h3>
+               <p>一些文本...</p>
+           </div>
+       </div>
+    </div>
+
+    <!-- 我的图片廊 -->
+    <div class="responsive clearfix">
+        <div class="img">
+            <a href="http//:www.baidu.com"><img src="images/demo1.jpg" width="300" height="180" alt="love"></a>
+            <div class="desc">添加一些图片描述</div>
+        </div>
+        <div class="img">
+            <a href="http//:www.baidu.com"><img src="images/demo2.jpg" width="300" height="180" alt="love"></a>
+            <div class="desc">添加一些图片描述</div>
+        </div>
+        <div class="img">
+            <a href="http://www.baidu.com"><img src="images/demo3.jpg" width="300" height="180" alt="love"></a>
+            <div class="desc">添加一些图片描述</div>
+        </div>
+        <div class="img">
+            <a href="http//:www.baidu.com"><img src="images/demo4.jpg" width="300" height="180" alt="love"></a>
+            <div class="desc">添加一些图片描述</div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+
+
+
+    <div class="footer">
+        <h2>底部区域</h2>
+    </div>
+
+
+</body>
+</html>

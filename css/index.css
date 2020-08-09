@@ -1,0 +1,680 @@
+/* 
+    @规则：
+         @charset    设置样式表的编码
+         @import     导入其他样式文件
+         @media      媒体查询
+         @font-face  自定义字体
+ */
+
+/* 导入reset.css样式文件 */
+@import 'reset.css';
+
+/* 导入字体样式 */
+/* @font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), 
+         url('../font/iconfont.woff2') format('woff2'), 
+         url('../font/iconfont.woff') format('woff'), 
+         url('../font/iconfont.ttf') format('truetype'), 
+         url('../font/iconfont.svg#iconfont') format('svg');
+} */
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* <!-- 顶部导航栏 --> */
+#header{
+    width: 100%;
+    background-color: #fff;
+    padding-top: 6px;
+    position: relative;
+}
+#header::before{
+    content: "";
+    height: 6px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background: linear-gradient(to left,rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(88, 86, 214), rgb(255, 45, 85));
+}
+/* 头部导航栏部分 */
+#header .container{
+    width: 1190px;
+    height: 61px;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 1px;
+}
+#header .container::after{
+    content: "";
+    height: 1px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(88, 86, 214), rgb(255, 45, 85));
+}
+
+
+/* <!-- 标题部分 --> */
+#header .container .logo a {
+    display: inline-block;
+    width: 220px;
+    height: 60px;
+    background-image: url(../images/bluelogo.png);
+    background-size: 200px 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+
+/* <!-- 中间导航 --> */
+#header .container .navigation{
+    width: 720px;
+    height: 60px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}#header .container .navigation ul{
+    position: relative;
+    height: 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#header .container .navigation ul li{
+    float: left;
+    height: 60px;
+    box-sizing: border-box;
+    margin: 0 1px 0 5px;
+    text-align: center;
+    font-size: 0;
+}
+
+#header .container .navigation ul li a{
+    font-size: 16px;
+    width: 100%;
+    line-height: 60px;
+}
+#header .container .navigation ul li span{
+    font-size: 20px;
+    padding: 0 0 0 6px;
+}
+#header .container .navigation ul li:hover{
+    background: linear-gradient(to top, #f4f4f4,#CFE6F5,#fff);
+}
+#header .container .navigation ul li:hover a{
+    color: #2988FF;
+    transition: .3s;
+}
+
+
+/* <!-- 右侧时间轴 --> */
+#header .container .right-nav{
+    height: 100%;
+    float: right;
+    width: 220px;
+    overflow: hidden;
+}
+#header .container .right-nav ul li{
+    float: right;
+    box-sizing: border-box;
+    height: 60px;
+    text-align: center;
+    padding: 10px 0;
+    overflow: hidden;
+}
+#header .container .right-nav ul li i{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+    margin: 0px 5px;
+}
+#header .container .right-nav ul li a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.3s;
+}
+#header .container .right-nav ul li:hover a{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#header .container .right-nav ul li a span{
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+/* ------------------------------------------------------------------- */
+/* <!-- 中间部分 --> */
+#container{
+    margin-top: 10px;
+}
+
+/* <!-- 中间--左侧--部分 --> */
+#container .lBox{
+    /* background-color: rgb(56, 192, 67); */
+    width: 300px;
+    box-sizing: border-box;
+}
+
+/* <!-- 个人名片部分 --> */
+#container .lBox .card{
+    width: 300px;
+    height: 100%;
+    border-radius: 3px;
+    background: #fff;
+    padding-bottom: 10px;
+}
+#container .lBox .card h2{
+    font-size: 20px;
+    color: #666;
+    font-weight: normal;
+    padding: 15px 0px 0px 30px;
+}
+#container .lBox .card p{
+    width: 230px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding-left: 10px;
+    font-size: 13px;
+    color: black;
+    line-height: 30px;
+    margin: 8px 0px 5px 30px;
+}
+#container .lBox .card p:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+#container .lBox .card .linkmore{
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 30px;
+}
+#container .lBox .card .linkmore li{
+    float: left;
+    width:50px;
+    height: 50px;
+    margin: 5px;
+    position: relative;
+}
+
+#container .lBox .card .linkmore li a{
+    display: inline-block;
+    width:100%;
+    height: 100%;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    
+}
+#container .lBox .card .linkmore li:hover a{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#container .lBox .card .linkmore li:hover .toolTipImage{
+    visibility: visible;
+}
+/* 提示工具 */
+#container .lBox .card .linkmore li .toolTipImage{
+    position: absolute;
+    top: -110px;
+    left: -25px;
+    visibility: hidden;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+}
+#container .lBox .card .linkmore li .toolTipImage img{
+    width: 100px;
+    height: 100px;
+}
+
+/* <!-- 搜索和导航栏目 --> */
+#container .lBox .search-nav{
+    width: 260px;
+    padding: 20px;
+    border-radius: 3px;
+    margin-top: 10px;
+    background-color: #fff;
+}
+#container .lBox .search-nav .icon{
+    font-size: 20px;
+}
+#container .lBox .search-nav .top{
+    position: relative;
+}
+
+#container .lBox .search-nav .top input{
+    width: 190px;
+    height: 21px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    outline: none;
+    padding: 3px;
+    text-indent: 3px;
+}
+#container .lBox .search-nav .top .btn{
+    height: 29px;
+    padding: 2px 10px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #2988FF;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-left: 5px;
+    position: relative;
+    top: 1px;
+}
+#container .lBox .search-nav .top .btn:hover{
+    background-color: #2988FF;
+    color: #fff;
+    transition: 0.2s;
+}
+#container .lBox .search-nav h3{
+    margin-top: 10px;
+    padding-left: 1px;
+}
+#container .lBox .search-nav h3 i{
+    margin-left: 5px;
+}
+#container .lBox .search-nav ul{
+    padding: 10px 0px;
+}
+#container .lBox .search-nav ul li{
+    float: left;
+    border: 1px solid #ddd;
+    width: 110px;
+    height: 30px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+}
+#container .lBox .search-nav ul li a{
+    display: inline-block;
+    line-height: 30px;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+#container .lBox .search-nav ul li a:hover{
+    color: #2988FF;
+    background-color: rgba(0, 0, 0, 0.1); 
+    transition: 0.2s;
+}
+
+/* <!-- 栏目最新 --> */
+#container .lBox .news{
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 3px;
+}
+#container .lBox .news .icon{
+    font-size: 20px;
+}
+/* #container .lBox .news h3{
+    background: url(../images/dian.jpg) repeat-x center;
+    margin: 5px 0;
+    font-weight: bold;
+} */
+#container .lBox .news h3::after{
+    content: "";
+    width: 160px;
+    height: 2px;
+    background: url(../images/dian.jpg) repeat-x;
+    display: inline-block;
+    margin: 5px 0;
+}
+#container .lBox .news h3 i{
+    background-color: #fff;
+    width: 60px;
+    padding-right: 6px;
+}
+#container .lBox .news ul{
+    margin: 10px 0 25px 0;
+}
+#container .lBox .news ul li{
+    margin: 8px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#container .lBox .news ul li a{
+    font-size: 13px;
+}
+#container .lBox .news ul li a:hover{
+    color: #2988FF;
+    text-decoration: underline; 
+    transition: 0.2s;
+}
+
+
+
+
+
+
+
+
+/* <!-- 中间--右侧--部分 --> */
+#container .rBox{
+    width: 880px;
+    height: 800px;
+    box-sizing: border-box;
+}
+
+
+
+/* 轮播图部分 */
+#container .rBox .imgBox{
+    width: 880px;
+    height: 280px;
+    overflow: hidden;
+}
+#container .rBox .imgBox .leftBox{
+    float: left;
+    width: 550px;
+    height: 280px;
+    border-radius: 3px;
+    background-color: #ddd;
+    overflow: hidden;
+    position: relative;
+}
+#container .rBox .imgBox .leftBox .sliderPage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 280px;
+    width: 3300px;
+}
+#container .rBox .imgBox .leftBox .sliderPage li {
+    width: 550px;
+    height: 280px;
+    float: left;
+}
+#container .rBox .imgBox .leftBox .sliderPage li img {
+    width: 100%;
+    height: 100%;
+}
+#container .rBox .imgBox .leftBox .btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    top: 50%;
+    margin-top: -25px;
+    opacity: 0.1;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#container .rBox .imgBox .leftBox:hover .btn {
+    opacity: 1;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+#container .rBox .imgBox .leftBox .leftBtn {
+    left: 15px;
+}
+
+#container .rBox .imgBox .leftBox .rightBtn {
+    right: 15px;
+}
+#container .rBox .imgBox .leftBox .sliderIndex {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    text-align: center;
+}
+
+#container .rBox .imgBox .leftBox .sliderIndex span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #999;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#container .rBox .imgBox .leftBox .sliderIndex .active {
+    background-color: #33C9FF;
+}
+
+
+
+
+
+/* 轮播图右侧部分 */
+#container .rBox .imgBox .rightBox{
+    position: relative;
+    float: left;
+    width: 320px;
+    height: 280px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 10px;
+    /* background: radial-gradient(#fff 25%, #33C9FF 80%, #fff 30%); */
+}
+#container .rBox .imgBox .rightBox .rtop{
+    width: 320px;
+    height: 40px;
+    border-radius: 3px;
+    background: url(../images/bgm.jpg);
+    text-align: center;
+}
+#container .rBox .imgBox .rightBox .rtop .presentTime{
+    color: #fff;
+    font-size: 15px;
+    line-height: 40px;
+}
+#container .rBox .imgBox .rightBox .rtop .presentTime span{
+    color: #ddd;
+    font-size: 15px;
+    margin: 0 2px;
+}
+#container .rBox .imgBox .rightBox .rbottom{
+    width: 320px;
+    height: 230px;
+    margin-top: 10px;
+    border-radius: 3px;
+    background: url(../images/panda.png) center no-repeat;
+    background-color: #fff;
+    background-size: 200px 230px;
+}
+#container .rBox .imgBox .rightBox .rbottom img{
+    width: 100%;
+    height: 100%;
+}
+/* ----------------------------------------------- */
+
+
+/* ---------------------------------------------------- */
+
+
+/* 中间博客部分 */
+#container .rBox .bloglist{
+    margin-top: 10px;
+    padding: 20px;
+    width: 840px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+#container .rBox .bloglist .icon{
+    font-size: 16px;
+}
+#container .rBox .bloglist .title{
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    border-bottom: 1px solid #999;
+}
+#container .rBox .bloglist ul li{
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #999;
+}
+#container .rBox .bloglist ul li h3{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 20px 0 10px 0;
+}
+#container .rBox .bloglist ul li h3 .icon{
+    font-size: 30px;
+}
+#container .rBox .bloglist ul li h3:hover a{
+    color: #2988FF;
+    transition: 0.2s;
+}
+#container .rBox .bloglist ul li span img{
+    width: 250px;
+    height: 150px;
+    float: left;
+    margin: 0 10px 0 0;
+    background-color: #fff;
+}
+#container .rBox .bloglist ul li .text{
+    height: 100px;
+    margin-left: 250px;
+    text-indent: 2em;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+#container .rBox .bloglist ul li .user{
+    margin: 10px 0;
+}
+#container .rBox .bloglist ul li .user i img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #2988FF;
+}
+#container .rBox .bloglist ul li .user .common{
+    margin-right: 6px;
+}
+#container .rBox .bloglist ul li .user .common a{
+    color: #999;
+}
+#container .rBox .bloglist ul li .user .common:hover a{
+    color: #2988FF;
+    border-bottom: 1px solid #2988FF;
+    transition: 0.1s;
+} 
+#container .rBox .bloglist ul li .user span.time{
+    margin-left: 6px;
+    line-height: 34px;
+    font-size: 13px;
+    color: #999;
+}
+#container .rBox .bloglist ul li .user .btn{
+    line-height: 34px;
+    padding: 0 10px;
+    margin-right: 6px;
+    color: #fff;
+    border-radius: 6px;
+    background-color: #2988FF;
+    box-shadow: 0px 5px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#container .rBox .bloglist ul li .user .btn span{
+    position: relative;
+    transition: 0.3s;
+}
+#container .rBox .bloglist ul li .user .btn span::after{
+    content: "»";
+    position: relative;
+    font-size: 15px;
+    opacity: 0;
+    top: 0;
+    right: -30px;
+    transition: 0.3s;
+}
+#container .rBox .bloglist ul li .user .btn:hover span::after{
+    opacity: 1;
+    right: -5px;
+}
+#container .rBox .bloglist ul li .user .btn:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#container .rBox .bloglist ul li .user span a{
+    color: #2988FF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------- */
+
+#footer::before{
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background: linear-gradient(to right, rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(88, 86, 214), rgb(255, 45, 85));
+}
+#footer::after{
+    content: "";
+    height: 6px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: linear-gradient(to left, rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(76, 217, 100), rgb(90, 200, 250), rgb(255, 45, 85), rgb(0, 122, 255), rgb(52, 170, 220), rgb(88, 86, 214), rgb(255, 45, 85));
+}
+
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: #373D41;
+    background-color: #fff;
+    position: relative;
+    bottom: 0px;
+}
+
+
+#footer .box{
+	clear: both;
+    height: 100px;
+    line-height: 100px;
+	margin: 20px auto 0px;
+	text-align: center;
+	color: #000;
+}
+#footer .box a {
+	color: #999;
+}
