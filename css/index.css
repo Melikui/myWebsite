@@ -31,7 +31,7 @@
 /* <!-- 顶部导航栏 --> */
 #header{
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
     padding-top: 6px;
     position: relative;
 }
@@ -89,24 +89,27 @@
 }
 #header .container .navigation ul li{
     float: left;
-    height: 60px;
+    height: 40px;
     box-sizing: border-box;
-    margin: 0 1px 0 5px;
+    padding: 0 10px 0 3px;
     text-align: center;
     font-size: 0;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    margin: 10px 0;
 }
 
 #header .container .navigation ul li a{
     font-size: 16px;
     width: 100%;
-    line-height: 60px;
+    line-height: 40px;
 }
 #header .container .navigation ul li span{
     font-size: 20px;
     padding: 0 0 0 6px;
 }
 #header .container .navigation ul li:hover{
-    background: linear-gradient(to top, #f4f4f4,#CFE6F5,#fff);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 #header .container .navigation ul li:hover a{
     color: #2988FF;
@@ -192,6 +195,7 @@
     color: black;
     line-height: 30px;
     margin: 8px 0px 5px 30px;
+    transition: all 0.3s;
 }
 #container .lBox .card p:hover{
     background-color: rgba(0, 0, 0, 0.6);
@@ -482,10 +486,10 @@
     height: 280px;
     box-sizing: border-box;
     overflow: hidden;
+    border-radius: 3px;
     margin-left: 10px;
     background-image: url(../images/tianqi.jfif);
     background-size: 320px 280px;
-    /* background: radial-gradient(#fff 25%, #33C9FF 80%, #fff 30%); */
 }
 /* -----时间部分------------------------------------------ */
 #container .rBox .imgBox .rightBox .rtop{
@@ -745,7 +749,7 @@
 
 #footer{
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
     position: relative;
 }
 #footer .box{
@@ -753,7 +757,6 @@
 	margin: 20px auto 0px;
 	text-align: center;
     color: rgb(58, 56, 56);
-    /* background-color: #ddd; */
 }
 #footer .ftop{
     padding: 15px 0 5px 0;
