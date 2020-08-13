@@ -9,14 +9,8 @@
 
 <body>
     <script>
-        var txt = '{ "sites" : [' +
-            '{ "name":"菜鸟教程" , "url":"www.runoob.com" },' +
-            '{ "name":"google" , "url":"www.google.com" },' +
-            '{ "name":"微博" , "url":"www.weibo.com" } ]}';
-        var tq = JSON.parse(txt);
-        console.log(tq.sites[1].name);
-        var obj = eval("(" + txt + ")");
-        console.log(obj);
+        var txt = document.body.innerHTML;
+        console.log(txt.length);
     </script>
 </body>
 
