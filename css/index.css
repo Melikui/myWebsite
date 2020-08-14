@@ -174,10 +174,9 @@
 /* <!-- 个人名片部分 --> */
 #container .lBox .card{
     width: 300px;
-    height: 100%;
+    height: 280px;
     border-radius: 3px;
     background: #fff;
-    padding-bottom: 10px;
 }
 #container .lBox .card h2{
     font-size: 20px;
@@ -188,25 +187,25 @@
 #container .lBox .card p{
     width: 230px;
     height: 30px;
-    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    padding-left: 10px;
+    padding: 1px 0 1px 10px;
     font-size: 13px;
     color: black;
     line-height: 30px;
-    margin: 8px 0px 5px 30px;
+    margin: 10px 0px 10px 30px;
     transition: all 0.3s;
 }
 #container .lBox .card p:hover{
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
 }
 
 #container .lBox .card .linkmore{
     display: flex;
     justify-content: space-between;
     height: 40px;
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: center;
     padding: 0 28px;
 }
@@ -224,12 +223,13 @@
     font-size: 28px;
     line-height: 40px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
     
 }
 #container .lBox .card .linkmore li:hover a{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
 }
 #container .lBox .card .linkmore li:hover .toolTipImage{
     visibility: visible;
@@ -296,8 +296,10 @@
 }
 #container .lBox .search-nav .top .btn:hover{
     background-color: #2988FF;
+    border: 1px solid #2988FF;
     color: #fff;
     transition: 0.2s;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
 }
 #container .lBox .search-nav h3{
     margin-top: 10px;
@@ -318,6 +320,7 @@
     text-align: center;
     border-radius: 6px;
     overflow: hidden;
+    transition: all 0.2s;
 }
 #container .lBox .search-nav ul li a{
     display: inline-block;
@@ -328,10 +331,12 @@
 }
 #container .lBox .search-nav ul li a:hover{
     color: #2988FF;
-    background-color: rgba(0, 0, 0, 0.1); 
     transition: 0.2s;
 }
-
+#container .lBox .search-nav ul li:hover{
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.3);
+}
 /* <!-- 栏目最新 --> */
 #container .lBox .news{
     margin-top: 10px;
@@ -388,12 +393,8 @@
 /* <!-- 中间--右侧--部分 --> */
 #container .rBox{
     width: 880px;
-    height: 800px;
     box-sizing: border-box;
 }
-
-
-
 /* 轮播图部分 */
 #container .rBox .imgBox{
     width: 880px;
@@ -473,9 +474,6 @@
 #container .rBox .imgBox .leftBox .sliderIndex .active {
     background-color: #33C9FF;
 }
-
-
-
 
 
 /* 轮播图右侧部分 */
