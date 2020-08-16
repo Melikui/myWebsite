@@ -218,8 +218,9 @@
 }
 
 #container .lBox .card .linkmore li a{
+    /* background-color: blue; */
     display: inline-block;
-    width:100%;
+    width: 100%;
     height: 100%;
     font-size: 28px;
     line-height: 40px;
@@ -515,16 +516,13 @@
     width: 320px;
     height: 240px;
     border-radius: 3px;
+    overflow: hidden;
 }
 
 #container .rBox .imgBox .rightBox .tqbox .rbottom {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -150px;
-    margin-top: -110px;
+    margin: 3px auto;
     width: 300px;
-    height: 220px;
+    height: 227px;
     border-radius: 3px;
     background-color: rgb(0, 0, 0, 0.3);
     background-size: 200px 230px;
@@ -541,7 +539,7 @@
     background-color: rgba(245, 243, 243, 0.1);
 }
 #container .rBox .imgBox .rightBox .tqbox .rbottom h3{
-    margin-top: 6px;
+    margin-top: 5px;
 }
 #container .rBox .imgBox .rightBox .tqbox .rbottom > p{
     text-align: center;
@@ -557,7 +555,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1px;
-    margin: 6px 0;
+    margin: 5px 0;
 }
 
 #container .rBox .imgBox .rightBox .tqbox .rbottom ul li {
@@ -753,7 +751,7 @@
 }
 #footer .box{
     clear: both;
-	margin: 10px auto;
+	margin: 0px auto;
 	text-align: center;
     color: rgb(58, 56, 56);
 }

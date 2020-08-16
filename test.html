@@ -4,48 +4,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test导航条</title>
     <style>
-        .box {
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        div.test {
+            position: relative;
+            /* width: 800px;
+            height: 100px; */
+            /* background-color: red; */
+        }
+        
+
+        /* p.ele {
+            width: 198px;
+        } */
+
+        /* <!-- 个人名片部分 --> */
+        .card {
             width: 300px;
-            height: 300px;
-            margin: 20px auto;
-            border-radius: 50%;
-            border-width: 10px;
-            border-style: solid;
-            border-left-color: red;
-            border-right-color: blue;
-            border-top-color: green;
-            border-bottom-color: yellow;
-            /* border: 10px solid red; */
-            box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.6);
+            height: 280px;
+            border-radius: 3px;
+            background: #fff;
+            position: relative;
         }
 
-        #container .lBox .card .linkmore li a {
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-            font-size: 28px;
-            line-height: 40px;
-            border-radius: 50%;
-            box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
-            transition: 0.3s;
-
+        .card h2 {
+            font-size: 20px;
+            color: #666;
+            font-weight: normal;
+            padding: 15px 0px 0px 30px;
         }
 
-        #container .lBox .card .linkmore li:hover a {
-            background-color: rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+        .card p {
+            width: 230px;
+            height: 30px;
+            box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            padding: 1px 0 1px 10px;
+            font-size: 13px;
+            color: black;
+            line-height: 30px;
+            margin: 10px 0px 10px 30px;
+            transition: all 0.3s;
         }
+
+        .card p.bg {
+            position: absolute;
+            margin: 0;
+            /* padding: 0; */
+            left: 30px;
+            top: 0px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            opacity: 0.3;
+            background-color: rgba(0, 0, 0, 0.3);
+            /* border: 1px solid #000; */
+            text-align: center;
+        }
+        .card p:hover {
+            box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+
+        /* .card .linkmore{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin-top: 15px;
+    text-align: center;
+    padding: 0 28px;
+}
+.card .linkmore li{
+    float: left;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.card .linkmore li a{
+    display: inline-block;
+    width:100%;
+    height: 100%;
+    font-size: 28px;
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    
+}
+.card .linkmore li:hover a{
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+}
+.card .linkmore li:hover .toolTipImage{
+    visibility: visible;
+}
+.card .linkmore li .toolTipImage{
+    position: absolute;
+    top: -110px;
+    left: -25px;
+    visibility: hidden;
+    width: 88px;
+    height: 88px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.card .linkmore li .toolTipImage img{
+    width: 88px;
+    height: 88px;
+    border-radius: 6px;
+} */
     </style>
 </head>
 
 <body>
-    
-    <div class="box"></div>
-    <script>
 
+
+    <div class="card topBox clearfix">
+        <h2>我的名片</h2>
+        <div class="test">
+            <p class="ele">昵称: Melikui</p>
+            <p class="ele">职业: 前端开发</p>
+            <p class="ele">现居: 安徽-合肥</p>
+            <p class="">Email：280284023@qq.com</p>
+            <p class="ele bg"></p>
+        </div>
+        <ul class="linkmore">
+            <li><a href="https://github.com/Melikui" title="Github"></a></li>
+            <li class="toolTip"><a href="https://blog.csdn.net/Melikui" class="iconfont" title="CSDN博客">
+                </a></li>
+            <li class="toolTip"><a href="#" class="iconfont" title="微信">
+                </a></li>
+            <li><a href="https://user.qzone.qq.com/280284023" class="iconfont" title="QQ号">
+                </a></li>
+            <li><a href="mailto:280284023@qq.com" class="iconfont" title="邮箱">
+                </a></li>
+        </ul>
+    </div>
+
+
+
+
+    <!-- <div>
+        <p class="ele">11111</p>
+        <p class="ele">22222</p>
+        <p class="ele">33333</p>
+        <p class="ele">44444</p>
+        <p class="ele bg"></p>
+    </div> -->
+
+    <script>
+        var pArr = document.getElementsByClassName('ele');
+        // var pArr = document.getElementsByTagName('p');
+        var Timer = null;
+        var pBg = pArr[pArr.length - 1];
+        for (var i = 0; i < pArr.length - 1; i++) {
+            pArr[i].onmouseenter = function () {
+                startMove(pBg, this.offsetTop);
+            }
+        }
+
+        function startMove(dom, target) {
+            clearInterval(Timer);
+            var a = 3;
+            var iSpeed = 0;
+            var u = 0.8;
+            Timer = setInterval(function () {
+                a = (target - dom.offsetTop) / 0.3;
+                iSpeed += a;
+                iSpeed *= 0.9;
+                if (Math.abs(iSpeed) < 1 && (target - dom.offsetTop) < 1) {
+                    clearInterval(Timer);
+                    dom.style.top = target + 'px';
+                } else {
+                    dom.style.top = dom.offsetTop + iSpeed + 'px';
+                }
+            }, 30);
+        }
     </script>
+
 </body>
 
 </html>
