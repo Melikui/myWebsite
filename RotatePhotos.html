@@ -7,96 +7,20 @@
     <title>学习中的小白</title>
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/RotatePhotos.css">
     <script src="./font/iconfont.js"></script>
-    <style>
-        :root,
-        body {
-            height: 100%;
-            transform-style: preserve-3d;
-        }
-        div.photoBox {
-            transform-style: preserve-3d;
-            perspective: 2000px;
-            width: 1500px;
-            height: 100%;
-            margin: 10px auto;
-        }
-
-        @keyframes round {
-            0% {
-                transform: translate(-50%, -50%) rotateY(0deg);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) rotateY(360deg);
-            }
-        }
-
-        div.photo {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 300px;
-            height: 600px;
-            transform: translate(-50%, -50%);
-            transform-style: preserve-3d;
-            transform-origin: center center;
-            animation: round 10s linear infinite;
-        }
-
-        img {
-            width: 260px;
-            position: absolute;
-            border: 1px solid transparent;
-        }
-
-        img:nth-of-type(1) {
-            transform: rotateY(45deg) translateZ(500px);
-        }
-
-        img:nth-of-type(2) {
-            transform: rotateY(90deg) translateZ(500px);
-        }
-
-        img:nth-of-type(3) {
-            transform: rotateY(135deg) translateZ(500px);
-        }
-
-        img:nth-of-type(4) {
-            transform: rotateY(180deg) translateZ(500px);
-        }
-
-        img:nth-of-type(5) {
-            transform: rotateY(225deg) translateZ(500px);
-        }
-
-        img:nth-of-type(6) {
-            transform: rotateY(270deg) translateZ(500px);
-        }
-
-        img:nth-of-type(7) {
-            transform: rotateY(315deg) translateZ(500px);
-        }
-
-        img:nth-of-type(8) {
-            transform: rotateY(360deg) translateZ(500px);
-        }
-    </style>
-    <!-- <base target="_blank"> -->
 
 </head>
 
 <body>
-    <!-- 顶部导航栏 -->
+    <!-- header顶部页头 -->
     <header id="header">
-        <!-- 顶部盒子, 1190px -->
+        <!-- 顶部导航栏版心区域, 1190px -->
         <div class="container layer clearfix">
-
-            <!-- 标题部分,280*60 -->
+            <!-- logo--标题--280*60 -->
             <h1 class="logo fl"><a target="_self" href="./index.html">Melikui</a></h1>
-
-            <!-- 中间导航,600*60 -->
-            <div class="navigation clearfix fl">
+            <!-- 中间导航--600*60 -->
+            <div class="navigation fl">
                 <div class="menu-fix-box fl">
                     <ul class="clearfix">
                         <li class="ele">
@@ -107,13 +31,13 @@
                         </li>
                         <li class="ele">
                             <a href="#"><svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-biji1"></use>
-                            </svg>&nbsp;日志</a>
+                                    <use xlink:href="#icon-biji1"></use>
+                                </svg>&nbsp;日志</a>
                         </li>
                         <li class="ele">
                             <a href="#"><svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-biji"></use>
-                            </svg>&nbsp;笔记</a>
+                                    <use xlink:href="#icon-biji"></use>
+                                </svg>&nbsp;笔记</a>
                         </li>
                         <li class="ele">
                             <a href="#"><svg class="icon" aria-hidden="true">
@@ -122,24 +46,24 @@
                         </li>
                         <li class="ele">
                             <a href="#"><svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-guanyu2"></use>
-                            </svg>&nbsp;关于</a>
+                                    <use xlink:href="#icon-guanyu2"></use>
+                                </svg>&nbsp;关于</a>
                         </li>
                         <li class="ele">
                             <a href="#"><svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-share"></use>
-                            </svg>&nbsp;友链</a>
+                                    <use xlink:href="#icon-share"></use>
+                                </svg>&nbsp;友链</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <!-- 右侧时间轴,200*60 -->
+            <!-- 右侧--搜索和时间轴---200*60 -->
             <div class="right-nav">
                 <ul>
                     <li><a href="#" title="时间轴">
                             <span>
                                 <svg class="icon" aria-hidden="true">
-                                    <use xlink:href="#icon-shijianzhou"></use>
+                                    <use xlink:href="#icon-shijianzhou1"></use>
                                 </svg>
                             </span>
                         </a></li>
@@ -154,7 +78,6 @@
 
                 </ul>
             </div>
-
         </div>
     </header>
 
