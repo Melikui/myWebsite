@@ -352,32 +352,22 @@
     border-radius: 6px;
 }
 
-/* <!-- 中间--左侧--部分 --> */
-#container .leftBox{
-    width: 880px;
-    box-sizing: border-box;
-}
 /* 中间displayBox部分 */
 #container .leftBox .displayBox{
     width: 880px;
     overflow: hidden;
 }
 
-/* -- 魔方显示部分-- */
-.topBox-left{
-    /* position: relative; */
+/* -----天气部分--------- */
+.topBox-tianqi{
     float: left;
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 280px;
     box-sizing: border-box;
     overflow: hidden;
-    border-radius: 3px;
-    background-color: #fff;
-    background-size: 320px 300px;
+    background-image: url(../images/tianqi.jfif);
+    background-size: 320px 280px;
 }
-
-
-/* -----天气部分--------- */
 .tqbox {
     position: relative;
     width: 320px;
@@ -470,7 +460,6 @@
 .tqbox .rbottom .u5 li:nth-of-type(5) {
     border-top: 2px solid rgb(255, 0, 212);
 }
-
 .tqbox .rbottom .u5 li p {
     margin-top: 3px;
     padding: 5px 0;
@@ -480,18 +469,16 @@
     color: white;
 }
 
-
 /* -- 轮播图部分 -- */
 .topBox-center{
-    margin: 0px 10px 0px 310px;
-    width: 570px;
-    height: 300px;
+    margin: 0px 10px 0px 330px;
+    width: 550px;
+    height: 280px;
     overflow: hidden;
 }
 .lunbotu{
-    /* float: left; */
-    width: 570px;
-    height: 300px;
+    width: 550px;
+    height: 280px;
     border-radius: 3px;
     overflow: hidden;
     position: relative;
@@ -500,12 +487,12 @@
     position: absolute;
     left: 0;
     top: 0;
-    height: 300px;
-    width: 3420px;
+    height: 280px;
+    width: 3300px;
 }
 .lunbotu .sliderPage li {
-    width: 570px;
-    height: 300px;
+    width: 550px;
+    height: 280px;
     float: left;
 }
 .lunbotu .sliderPage li img {
@@ -543,7 +530,7 @@
 .lunbotu .sliderIndex {
     position: absolute;
     width: 100%;
-    bottom: 25px;
+    bottom: 20px;
     text-align: center;
 }
 
@@ -559,6 +546,51 @@
 
 .lunbotu .sliderIndex .active {
     background-color: #33C9FF;
+}
+
+/* -- 魔方显示部分-- */
+.centerBox-mofang{
+    float: right;
+    width: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+/* <!-- 中间--左侧--部分 --> */
+#container .leftBox{
+    width: 880px;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+/* 项目列表部分 */
+.leibie{
+    height: 100%;
+    width: 880px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.leibie ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.leibie ul li{
+    float: left;
+    box-sizing: border-box;
+    width: 164px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s linear;
+
+}
+.leibie ul li:hover{
+    box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -672,18 +704,16 @@
     color: #2988FF;
 }
 
-
 /* <!-- 中间--右侧--部分 --> */
 #container .rightBox{
     width: 300px;
     box-sizing: border-box;
     margin-bottom: 10px;
 }
-
 /* <!-- 搜索和导航栏目 --> */
 #container .rightBox .search-nav{
     width: 260px;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 3px;
     background-color: #fff;
 }
@@ -800,13 +830,6 @@
     text-decoration: underline; 
     transition: 0.2s;
 }
-
-
-
-
-
-
-
 
 
 /* ----底部部分--------------------------------------------------------------- */
