@@ -1,4 +1,5 @@
-// 运动魔方
+
+// 让魔方运动
 var oDiv = document.getElementById('demo');
 var lastX = 0;
 var lastY = 0;
@@ -10,6 +11,7 @@ oDiv.onmousedown = function (e) {
     var disX = event.clientX - this.offsetLeft;
     var disY = event.clientY - this.offsetTop;
     var self = this;
+    e.preventDefault();//阻止默认事件，取消文字选中
     document.onmousemove = function (e) {
         var event = event || e;
         var newLeft = event.clientX - disX;

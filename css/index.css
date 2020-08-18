@@ -35,8 +35,9 @@ canvas {
 /* -- header顶部页头 -- */
 #header{
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.6);
     padding-top: 6px;
+    position: relative;
 }
 #header::before{
     content: "";
