@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/mofang.css">
     <script src="./font/iconfont.js"></script>
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/bg.js"></script>
     <!-- <base target="_blank"> -->
 
 </head>
 
 <body>
+    <canvas id="bgCanvas"></canvas>
     <!-- header顶部页头 -->
     <header id="header">
         <!-- 顶部导航栏版心区域, 1190px -->
@@ -84,76 +87,83 @@
 
     <!-- 中间部分 -->
     <div class="wbox">
-        <div class="wrapper">
-            <div class="xbox">
-                <div class="box1">
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                </div>
-                <div class="box2">
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                </div>
-                <div class="box3">
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                </div>
-                <div class="box4">
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                </div>
-                <div class="box5">
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                </div>
-                <div class="box6">
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
-                    <div class="minbox"></div>
+        <div class="black"></div>
+        <div class="dragDiv">
+            <div id="dragBox">
+                <div class="yuanquan"></div>
+            <div class="wrapper">
+                <div class="xbox">
+                    <div class="box1">
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                    </div>
+                    <div class="box2">
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                    </div>
+                    <div class="box3">
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                    </div>
+                    <div class="box4">
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                    </div>
+                    <div class="box5">
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                    </div>
+                    <div class="box6">
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                        <div class="minbox"></div>
+                    </div>
                 </div>
             </div>
+            </div>
         </div>
+
     </div>
 
     <!-- 底部footer部分 -->
@@ -202,6 +212,8 @@
     </footer>
     <script src="./js/webrunTime.js"></script>
     <script src="./js/wordsCount.js"></script>
+    <script src="./js/drag.js"></script>
+    
 
 </body>
 

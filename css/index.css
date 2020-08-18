@@ -26,14 +26,17 @@
     fill: currentColor;
     overflow: hidden;
 }
-
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 /* ---header顶部页头------------------------------------------------------------------------- */
 /* -- header顶部页头 -- */
 #header{
     width: 100%;
     background-color: #fff;
     padding-top: 6px;
-    position: relative;
 }
 #header::before{
     content: "";
@@ -48,7 +51,6 @@
     width: 1190px;
     height: 61px;
     box-sizing: border-box;
-    position: relative;
     overflow: hidden;
 }
 #header::after{
@@ -61,6 +63,7 @@
 }
 /* -- logo--标题--280*60 --*/
 #header .container .logo{
+    position: relative;
     width: 200px;
     height: 60px;
 }
@@ -116,6 +119,7 @@
 }
 /* -- 右侧--搜索和时间轴---200*60 -- */
 #header .container .right-nav{
+    position: relative;
     height: 100%;
     float: right;
     width: 220px;
@@ -199,7 +203,7 @@
     line-height: 40px;
     color: #000;
     padding-left: 6px;
-    margin-left: 10px;
+    margin-left: 8px;
     text-align: center;
 }
 /* 昵称部分 */
@@ -261,7 +265,7 @@
     width: 300px;
     height: 280px;
     background-image: url(../images/sun.jpg);
-    background-size: 100px 100px;
+    background-size: 88px 88px;
     background-position: right top;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -269,6 +273,7 @@
     background-color: #fff;
 }
 .idCard{
+    position: relative;
     float: right;
     width: 300px;
     height: 280px;
@@ -561,6 +566,7 @@
     padding: 5px;
 }
 .leibie ul li{
+    position: relative;
     float: left;
     box-sizing: border-box;
     width: 164px;
@@ -575,9 +581,16 @@
 .leibie ul li:hover{
     box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.3);
 }
+.rizhi{
+    width: 880px;
+    height: 300px;
+    background-color: #fff;
+}
+
 
 /* 中间博客部分 */
 #container .leftBox .bloglist{
+    position: relative;
     margin-top: 10px;
     padding: 20px;
     width: 840px;
@@ -704,6 +717,7 @@
 }
 
 #container .rightBox .search-nav .top input{
+    position: relative;
     width: 180px;
     height: 21px;
     border: 1px solid #999;
@@ -746,6 +760,7 @@
     padding: 10px 0px;
 }
 #container .rightBox .search-nav ul li{
+    position: relative;
     float: left;
     border: 1px solid #ddd;
     width: 110px;
@@ -799,6 +814,7 @@
     margin: 10px 0 25px 0;
 }
 #container .rightBox .recommend ul li{
+    position: relative;
     margin: 8px 0;
     white-space: nowrap;
     text-overflow: ellipsis;
