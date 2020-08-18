@@ -255,7 +255,6 @@
     padding-left: 25px;
 }
 
-
 /* <!-- 个人名片部分 --> */
 .topBox-right{
     float: right;
@@ -352,133 +351,40 @@
     border-radius: 6px;
 }
 
+
+
+/* <!-- 中间--左侧--部分 --> */
+#container .leftBox{
+    width: 880px;
+    box-sizing: border-box;
+}
+
 /* 中间displayBox部分 */
 #container .leftBox .displayBox{
     width: 880px;
     overflow: hidden;
 }
 
-/* -----天气部分--------- */
-.topBox-tianqi{
+/* -- 魔方显示部分-- */
+.centerBox-mofang{
     float: left;
-    width: 320px;
-    height: 280px;
+    width: 300px;
     box-sizing: border-box;
     overflow: hidden;
-    background-image: url(../images/tianqi.jfif);
-    background-size: 320px 280px;
-}
-.tqbox {
-    position: relative;
-    width: 320px;
-    height: 280px;
     border-radius: 3px;
-    overflow: hidden;
-     background-size: 320px 280px;
-     background-repeat: no-repeat;
+    background-color: #fff;
 }
-.tqbox .rbottom {
-    width: 300px;
-    height: 260px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -150px;
-    margin-top: -130px;
-    border-radius: 3px;
-    background-color: rgb(0, 0, 0, 0.1);
-    color: white;
-    text-align: center;
-    transition: all 0.3s;
-    overflow: hidden;
-}
-.tqbox .rbottom:hover {
-    background-color: rgb(0, 0, 0, 0.6);
-    transition: all 0.3s;
-}
-.tqbox .rbottom p.tqtips{
-    height: 33px;
-    overflow: hidden;
-}
-.tqbox .rbottom:hover .u5 li p {
-    background-color: rgba(245, 243, 243, 0.1);
-}
-.tqbox .rbottom h3{
-    margin-top: 8px;
-}
-.tqbox .rbottom > p{
-    text-align: center;
-    font-size: 11px;
-    margin: 6px 0;
-}
-.tqbox .rbottom img {
-    width: 100%;
-    height: 100%;
-}
-
-.tqbox .rbottom ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 1px;
-}
-
-.tqbox .rbottom .u3 li {
-    width: 80px;
-    height: 20px;
-    padding: 3px 3px;
-    margin: 3px 0;
-    line-height: 20px;
-    font-size: 14px;
-    border-radius: 6px;
-}
-
-.tqbox .rbottom .u5{
-    padding-bottom: 2px;
-}
-.tqbox .rbottom .u5 li {
-    width: 60px;
-    font-size: 8px;
-    margin: 1px;
-}
-
-.tqbox .rbottom .u5 li:nth-of-type(1) {
-    border-top: 2px solid rgba(0, 153, 255, 0.836);
-}
-
-.tqbox .rbottom .u5 li:nth-of-type(2) {
-    border-top: 2px solid rgb(6, 240, 57);
-}
-
-.tqbox .rbottom .u5 li:nth-of-type(3) {
-    border-top: 2px solid rgb(238, 255, 0);
-}
-
-.tqbox .rbottom .u5 li:nth-of-type(4) {
-    border-top: 2px solid rgb(250, 111, 18);
-}
-
-.tqbox .rbottom .u5 li:nth-of-type(5) {
-    border-top: 2px solid rgb(255, 0, 212);
-}
-.tqbox .rbottom .u5 li p {
-    margin-top: 3px;
-    padding: 5px 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
-    transition: all 0.3s;
-    color: white;
-}
-
 /* -- 轮播图部分 -- */
-.topBox-center{
-    margin: 0px 10px 0px 330px;
-    width: 550px;
-    height: 280px;
+.lunbotuBox{
+    position: relative;
+    margin: 0px 10px 0px 310px;
+    width: 570px;
+    height: 300px;
     overflow: hidden;
 }
 .lunbotu{
-    width: 550px;
-    height: 280px;
+    width: 570px;
+    height: 300px;
     border-radius: 3px;
     overflow: hidden;
     position: relative;
@@ -487,12 +393,12 @@
     position: absolute;
     left: 0;
     top: 0;
-    height: 280px;
-    width: 3300px;
+    height: 300px;
+    width: 3420px;
 }
 .lunbotu .sliderPage li {
-    width: 550px;
-    height: 280px;
+    width: 570px;
+    height: 300px;
     float: left;
 }
 .lunbotu .sliderPage li img {
@@ -530,7 +436,7 @@
 .lunbotu .sliderIndex {
     position: absolute;
     width: 100%;
-    bottom: 20px;
+    bottom: 10px;
     text-align: center;
 }
 
@@ -547,22 +453,99 @@
 .lunbotu .sliderIndex .active {
     background-color: #33C9FF;
 }
-
-/* -- 魔方显示部分-- */
-.centerBox-mofang{
-    float: right;
-    width: 300px;
-    box-sizing: border-box;
-    overflow: hidden;
+/* -----天气部分--------- */
+.tqbox {
+    width: 310px;
+    height: 250px;
+    padding: 0 5px 3px 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -136px;
     border-radius: 3px;
-    background-color: #fff;
+    background-color: rgb(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    transition: all 0.3s;
+    overflow: hidden;
+    z-index: 10;
+}
+.tqbox:hover {
+    background-color: rgb(0, 0, 0, 0.6);
+    transition: all 0.3s;
+}
+.tqbox p.tqtips{
+    height: 33px;
+    overflow: hidden;
+}
+.tqbox:hover .u5 li p {
+    background-color: rgba(245, 243, 243, 0.1);
+}
+.tqbox h3{
+    margin-top: 8px;
+}
+.tqbox > p{
+    text-align: center;
+    font-size: 11px;
+    margin: 6px 0;
+}
+.tqbox img {
+    width: 100%;
+    height: 100%;
 }
 
-/* <!-- 中间--左侧--部分 --> */
-#container .leftBox{
-    width: 880px;
-    box-sizing: border-box;
-    margin: 10px 0;
+.tqbox ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 1px;
+}
+
+.tqbox .u3 li {
+    width: 80px;
+    height: 20px;
+    padding: 3px;
+    margin: 3px 0;
+    line-height: 20px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.tqbox .u5{
+    padding-bottom: 2px;
+}
+.tqbox .u5 li {
+    width: 60px;
+    font-size: 8px;
+    margin: 1px;
+}
+
+.tqbox .u5 li:nth-of-type(1) {
+    border-top: 2px solid rgba(0, 153, 255, 0.836);
+}
+
+.tqbox .u5 li:nth-of-type(2) {
+    border-top: 2px solid rgb(6, 240, 57);
+}
+
+.tqbox .u5 li:nth-of-type(3) {
+    border-top: 2px solid rgb(238, 255, 0);
+}
+
+.tqbox .u5 li:nth-of-type(4) {
+    border-top: 2px solid rgb(250, 111, 18);
+}
+
+.tqbox .u5 li:nth-of-type(5) {
+    border-top: 2px solid rgb(255, 0, 212);
+}
+.tqbox .u5 li p {
+    margin-top: 3px;
+    padding: 4px 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    transition: all 0.3s;
+    color: white;
 }
 
 /* 项目列表部分 */
@@ -570,7 +553,7 @@
     height: 100%;
     width: 880px;
     background-color: #fff;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 .leibie ul{
     display: flex;
@@ -583,7 +566,7 @@
     width: 164px;
     height: 100px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 5px;
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
     transition: all 0.3s linear;
@@ -592,7 +575,6 @@
 .leibie ul li:hover{
     box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.3);
 }
-
 
 /* 中间博客部分 */
 #container .leftBox .bloglist{
