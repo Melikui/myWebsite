@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>Simple example - Editor.md examples</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="../css/editormd.css" />
+        <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <div id="layout">
+            <header>
+                <h1>Simple example</h1>
+            </header>
+            <div id="test-editormd">
+                <textarea style="display:none;">
+                
+                    #### Disabled options
+
+                    - TeX (Based on KaTeX);
+                    - Emoji;
+                    - Task lists;
+                    - HTML tags decode;
+                    - Flowchart and Sequence Diagram;
+                    
+                    #### Editor.md directory
+                    
+                        editor.md/
+                                lib/
+                                css/
+                                scss/
+                                tests/
+                                fonts/
+                                images/
+                                plugins/
+                                examples/
+                                languages/     
+                                editormd.js
+                                ...
+                    
+                    ```html
+                    &lt;!-- English --&gt;
+                    &lt;script src="../dist/js/languages/en.js"&gt;&lt;/script&gt;
+                    
+                    &lt;!-- 繁體中文 --&gt;
+                    &lt;script src="../dist/js/languages/zh-tw.js"&gt;&lt;/script&gt;
+                    ```
+                
+                
+                </textarea>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="../editormd.min.js"></script>
+        <script type="text/javascript">
+			var testEditor;
+
+            $(function() {
+                testEditor = editormd("test-editormd", {
+                    width   : "90%",
+                    height  : 640,
+                    emoji: true,//emoji表情，默认关闭
+                    taskList: true,
+                    tocm: true, // Using [TOCM]
+                    tex: true,// 开启科学公式TeX语言支持，默认关闭
+
+                    flowChart: true,//开启流程图支持，默认关闭
+                    sequenceDiagram: true,//开启时序/序列图支持，默认关闭,
+                    syncScrolling : "single",
+                    path    : "../lib/",
+                    saveHTMLToTextarea:true //方便提交表单数据
+                    
+
+
+                  
+                });
+                
+                /*
+                // or
+                testEditor = editormd({
+                    id      : "test-editormd",
+                    width   : "90%",
+                    height  : 640,
+                    path    : "../lib/"
+                });
+                */
+            });
+        </script>
+    </body>
+</html>

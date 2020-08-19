@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <link rel="icon" href="images/smiley.gif">
     <title>学习中的小白</title>
-    <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/smofang.css">
     <script src="./font/iconfont.js"></script>
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/bg.js"></script>
+    <base target="_blank">
 
 </head>
 
+
+
 <body>
+    <canvas id="bgCanvas"></canvas>
     <!-- header顶部页头 -->
     <header id="header">
         <!-- 顶部导航栏版心区域, 1190px -->
@@ -80,19 +86,76 @@
         </div>
     </header>
 
-    <!-- 中间部分 -->
-  
+    <!-- article区域 -->
+    <article id="container" class="layer clearfix">
+        <!-- article区域topBox部分 -->
+        <div class="topBox clearfix">
+            <div class="bannnerBox">
+                <!-- 时间显示部分 -->
+                <div class="showTime">
+                    <div class="presentTime">2020年03月10日 星期二 00:00:00</div>
+                </div>
+                <div class="bgPic">
+                    <div class="tiao"></div>
+                    <span class="chageSize40" id="iconFontSize"><svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xin1"></use>
+                        </svg></span>
+                    <div class="melikui">
+                        <span>Melikui</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 我的名片 -->
+            <div class="topBox-right clearfix">
+                <!-- 我的名片 -->
+                <div class="idCard clearfix">
+                    <h2>我的名片</h2>
+                    <p>姓名：李魁</p>
+                    <p>职业：前端开发</p>
+                    <p>现居：安徽-合肥</p>
+                    <p>Email：280284023@qq.com</p>
+                    <ul class="linkmore">
+                        <li><a href="https://github.com/Melikui" title="Github">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-github"></use>
+                                </svg>
+                            </a></li>
+                        <li class="toolTip"><a href="https://blog.csdn.net/Melikui" class="iconfont" title="CSDN博客">
+                                <span class="toolTipImage"><img src="./images/CSDN.png" alt=""></span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-csdn"></use>
+                                </svg>
+                            </a></li>
+                        <li class="toolTip"><a href="#" class="iconfont" title="微信">
+                                <span class="toolTipImage"><img src="./images/weixin.png" alt=""></span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-weixin"></use>
+                                </svg>
+                            </a></li>
+                        <li><a href="https://user.qzone.qq.com/280284023" class="iconfont" title="QQ号">
+                                <span class="toolTipImage"><img src="./images/qq.png" alt=""></span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-qq-icon"></use>
+                                </svg>
+                            </a></li>
+                        <li><a href="mailto:280284023@qq.com" class="iconfont" title="邮箱">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-youxiang1"></use>
+                                </svg>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </article>
 
 
 
 
 
-
-
-
-
-
-    <!-- 底部footer部分 -->
+    <!-- footer底部页脚部分 -->
     <footer id="footer">
         <div class="box layer">
             <div class="ftop">
@@ -136,8 +199,11 @@
             </div>
         </div>
     </footer>
+
     <script src="./js/webrunTime.js"></script>
     <script src="./js/wordsCount.js"></script>
+
+    
 
 </body>
 
