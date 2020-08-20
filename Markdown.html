@@ -1,79 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<head>
+<head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>笔记编辑页</title>
+    <link rel="icon" href="images/smiley.gif">
+    <title>学习中的小白</title>
+    <link rel="stylesheet" href="./css/smofang.css">
+    <script src="./font/iconfont.js"></script>
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/bg.js"></script>
     <link rel="stylesheet" href="./editorMD/examples/css/style.css" />
     <link rel="stylesheet" href="./editorMD/css/editormd.css" />
-    <script src="./editorMD/examples/js/jquery.min.js"></script>
     <script src="./editorMD/examples/js/zepto.min.js"></script>
     <script src="./editorMD/editormd.js"></script>
-
+    <link rel="stylesheet" href="./css/index.css">
 
 </head>
 
+
+
 <body>
-    <div id="layout">
-        <div class="editormd" id="test-editormd">
-            <textarea></textarea>
+    <canvas id="bgCanvas"></canvas>
+    <!-- header顶部页头 -->
+    <header id="header">
+        <!-- 顶部导航栏版心区域, 1190px -->
+        <div class="container layer clearfix">
+            <!-- logo--标题--280*60 -->
+            <h1 class="logo fl"><a target="_self" href="./index.html">Melikui</a></h1>
+            <!-- 中间导航--600*60 -->
+            <div class="navigation fl">
+                <div class="menu-fix-box fl">
+                    <ul class="clearfix">
+                        <li class="ele">
+                            <a target="_self" href="./index.html">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-xin1"></use>
+                                </svg>&nbsp;首页</a>
+                        </li>
+                        <li class="ele">
+                            <a href="#"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-biji1"></use>
+                                </svg>&nbsp;日志</a>
+                        </li>
+                        <li class="ele">
+                            <a href="#"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-biji"></use>
+                                </svg>&nbsp;笔记</a>
+                        </li>
+                        <li class="ele">
+                            <a href="#"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-liuyan2"></use>
+                                </svg>&nbsp;留言</a>
+                        </li>
+                        <li class="ele">
+                            <a href="#"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-guanyu2"></use>
+                                </svg>&nbsp;关于</a>
+                        </li>
+                        <li class="ele">
+                            <a href="#"><svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-share"></use>
+                                </svg>&nbsp;友链</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右侧--搜索和时间轴---200*60 -->
+            <div class="right-nav">
+                <ul>
+                    <li><a href="#" title="时间轴">
+                            <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-shijianzhou1"></use>
+                                </svg>
+                            </span>
+                        </a></li>
+                    <li><i>|</i></li>
+                    <li><a href="#" title="全局搜索">
+                            <span>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-soushuo"></use>
+                                </svg>
+                            </span>
+                        </a></li>
+
+                </ul>
+            </div>
         </div>
-        <br /><input id="submit" type="button" name="submit" value="Submit" class="btn" style="margin-left: 5%;" />
-        <button id="preview-btn">预览</button>
-    </div>
-    
+    </header>
 
+    <!-- article区域 -->
+    <article id="container" class="layer clearfix">
+        <!-- article区域topBox部分 -->
+        <div class="topBox clearfix">
 
-    <script>
-        testEditor = editormd("test-editormd", {
-            width: "90%",
-            height: 740,
-            path: './editorMD/lib/',
-            theme: "default",
-            previewTheme: "default",
-            editorTheme: "xq-light",
-            codeFold: true,
-            saveHTMLToTextarea: true,    // 保存 HTML 到 Textarea
-            searchReplace: true,
-            //watch : false,                // 关闭实时预览
-            htmlDecode: "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启    
-            //toolbar  : false,             //关闭工具栏
-            // previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
-            emoji: true,
-            taskList: true,
-            tocm: true,         // Using [TOCM]
-            tex: true,                   // 开启科学公式TeX语言支持，默认关闭
-            flowChart: true,             // 开启流程图支持，默认关闭
-            sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
-            //dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为true
-            //dialogShowMask : false,     // 设置弹出层对话框显示透明遮罩层，全局通用，默认为true
-            //dialogDraggable : false,    // 设置弹出层对话框不可拖动，全局通用，默认为true
-            //dialogMaskOpacity : 0.4,    // 设置透明遮罩层的透明度，全局通用，默认值为0.1
-            //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
-            imageUpload: true,
-            imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-            imageUploadURL: "./php/upload.php",
-            onload: function () {
-                // console.log('onload', this);
-                //this.fullscreen();
-                //this.unwatch();
-                //this.watch().fullscreen();
-                //this.setMarkdown("#PHP");
-                //this.width("100%");
-                //this.height(480);
-                //this.resize("100%", 640);
-            }
-        });
-        document.getElementById("submit").onclick = function () {
-            let htmlCode = document.getElementsByClassName("editormd-preview-container")[0].innerHTML;
-            let mdCode = testEditor.getMarkdown();
-            console.log(htmlCode);
+            <div id="layout">
+                <div class="editormd" id="test-editormd">
+                    <textarea>
+### 多语言代码高亮 Codes
+
+#### 行内代码 Inline code
+
+执行命令：`npm install marked`
+
+#### 缩进风格
+
+即缩进四个空格，也做为实现类似 `<pre>` 预格式化文本 ( Preformatted Text ) 的功能。
+
+    <?php
+        echo "Hello world!";
+    ?>
+
+预格式化文本：
+
+    | First Header  | Second Header |
+    | ------------- | ------------- |
+    | Content Cell  | Content Cell  |
+    | Content Cell  | Content Cell  |
+
+#### JS代码
+        </textarea>
+                </div>
+                <br /><input id="submit" type="button" name="submit" value="提交" class="btn" style="margin-left: 5%;" />
+                <!-- <button id="preview-btn">预览</button> -->
+            </div>
             
-        }
-        // document.getElementsByTagName('textarea')[0].innerHTML = "##HELLO keke";
-        
-    </script>
+            <!-- <script>
+                testEditor = editormd("test-editormd", {
+                    width: "90%",
+                    height: 900,
+                    path: './editorMD/lib/',
+                    theme: "default",
+                    previewTheme: "default",
+                    editorTheme: "xq-light",
+                    codeFold: true,
+                    saveHTMLToTextarea: true,    // 保存 HTML 到 Textarea
+                    searchReplace: true,
+                    //watch : false,                // 关闭实时预览
+                    htmlDecode: "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启    
+                    // toolbar  : false,             //关闭工具栏
+                    // previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
+                    emoji: true,
+                    taskList: true,
+                    tocm: true,         // Using [TOCM]
+                    tex: true,                   // 开启科学公式TeX语言支持，默认关闭
+                    flowChart: true,             // 开启流程图支持，默认关闭
+                    sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
+                    // dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为true
+                    // dialogShowMask : false,     // 设置弹出层对话框显示透明遮罩层，全局通用，默认为true
+                    // dialogDraggable : false,    // 设置弹出层对话框不可拖动，全局通用，默认为true
+                    // dialogMaskOpacity : 0.4,    // 设置透明遮罩层的透明度，全局通用，默认值为0.1
+                    // dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
+                    imageUpload: true,
+                    imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                    imageUploadURL: "./php/upload.php",
+                    onload: function () {
+                        // console.log('onload', this);
+                        //this.fullscreen();
+                        //this.unwatch();
+                        //this.watch().fullscreen();
+                        //this.setMarkdown("#PHP");
+                        //this.width("100%");
+                        //this.height(480);
+                        //this.resize("100%", 640);
+                    }
+                });
+                document.getElementById("submit").onclick = function () {
+                    let htmlCode = document.getElementsByClassName("editormd-preview-container")[0].innerHTML;
+                    let mdCode = testEditor.getMarkdown();
+                    console.log(htmlCode);
+                    
+                }
+                // document.getElementsByTagName('textarea')[0].innerHTML = "##HELLO keke";
+            </script> -->
+            <script src="./js/editor.js"></script>
+        </div>
+    </article>
+
+
+
+
+
+    <!-- footer底部页脚部分 -->
+    <footer id="footer">
+        <div class="box layer">
+            <div class="ftop">
+                <span>
+                    <i>© 2020-3-10</i>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xin1"></use>
+                    </svg>
+                    <i>Melikui</i>
+                </span>
+                <span>|</span>
+                <span class="big">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-tongji1"></use>
+                    </svg>
+                    <i>站点字数合计: <i id="wordCount">字数统计</i></i>
+                </span>
+                <span>|</span>
+                <span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-beian4"></use>
+                    </svg>
+                    <a target="_blank" href="http://www.beian.miit.gov.cn/">皖ICP备20009100号</a>
+                </span>
+            </div>
+            <div class="webRunTime">本站已安全运行：982 天 19 小时 26 分 57 秒</div>
+            <div class="fbottom">
+                <span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-ai-user"></use>
+                    </svg>
+                    <i>999人</i>
+                </span>
+                <span>|</span>
+                <span>
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-yanjing"></use>
+                    </svg>
+                    <i>666次</i>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/webrunTime.js"></script>
+    <script src="./js/wordsCount.js"></script>
+
+
 
 </body>
 
