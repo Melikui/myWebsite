@@ -16,7 +16,7 @@
 
 
 
-<body>
+<body onLoad="showAllData();">
     <canvas id="bgCanvas"></canvas>
     <!-- header顶部页头 -->
     <header id="header">
@@ -89,7 +89,25 @@
     <!-- article区域 -->
     <article id="container" class="layer clearfix">
         <!-- 留言部分 -->
-        <div class="liuyan"></div>
+        <div class="liuyan">
+            <form action="#" method="GET">
+                <p class="ly-p">昵称：</p>
+                <input type="text" id="ly-name" required />
+                <p class="ly-p">留言：</p>
+                <textarea type="text" rows="10" cols="30" id="ly-msg" required></textarea>
+                <p class="ly-p"><input type="submit" id="save" value="提交留言" /></p>
+            </form>
+        </div>
+        <!-- 留言版部分 -->
+        <div class="liuyanban">
+            <h3>留&nbsp;言&nbsp;板</h3>
+            <div class="ly-content"  id="mr-cont"></div>
+            <!-- <dl class="datalist" id="datalist">
+                <dt>Melikui</dt>
+                <dd>这是我的第一条留言...</dd>
+            </dl> -->
+        </div>
+        <script src="./js/liuyan.js"></script>
     </article>
 
 

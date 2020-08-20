@@ -162,6 +162,131 @@ canvas {
     line-height: 40px;
     font-size: 20px;
 }
+.liuyan{
+    position: relative;
+    width: 800px;
+    padding: 30px 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+}
+.ly-p{
+    padding: 15px 10px 10px 10px;
+    text-indent: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+}
+.liuyan input[type="text"]{
+    box-sizing: border-box;
+	width: 690px;
+    height: 30px;
+    margin: 0 10px;
+    padding: 0 10px;
+    line-height: 30px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+.liuyan textarea {
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 690px;
+    margin: 0 10px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #999;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+}
+.liuyan input[type="submit"] {
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid transparent;
+    color: #2988FF;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 3px;
+    border-radius: 10px;
+	cursor: pointer;
+}
+.liuyan input[type="submit"]:hover {
+	position: relative;
+	background: #f6f6f6;
+    color: #2988FF;
+    background-color: #2988FF;
+    border: 1px solid #2988FF;
+    color: #fff;
+    transition: 0.2s;
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+.liuyanban{
+    position: relative;
+    width: 900px;
+    margin: 10px auto;
+    padding: 10px 50px;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    box-sizing: border-box;
+}
+.liuyanban h3{
+    font-size: 20px;
+    color: #2988FF;
+    padding: 10px;
+    border-bottom: 2px solid #999;
+}
+
+.liuyanban .datalist .divlist{
+    border-radius: 3px;
+    padding: 5px 10px;
+    /* background-color: #fff; */
+    margin: 15px 0;
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.liuyanban .datalist .divlist:hover{
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.liuyanban .datalist dt{
+    font-size: 14px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    color: #666;
+}
+.liuyanban .datalist dd{
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    min-height: 30px;
+	line-height: 20px;
+    text-indent: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---article区域---------------------------------------------------------------- */
 /* -- article中间区域 -- */

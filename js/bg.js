@@ -2,8 +2,8 @@ $(function () {
     var canvas = document.getElementById('bgCanvas'),
         ctx = canvas.getContext('2d');
     var canvasParent = canvas.parentNode;
-    canvas.width = canvasParent.offsetWidth;
-    canvas.height = canvasParent.offsetHeight;
+    canvas.width = canvasParent.clientWidth;
+    canvas.height = canvasParent.clientHeight;
 
     ctx.lineWidth = .3;
     ctx.strokeStyle = (new Color(150)).style;
@@ -14,7 +14,7 @@ $(function () {
     };
 
     var dots = {
-        nb: (canvas.width + canvas.height) / 5,
+        nb: (canvas.width + canvas.width) / 5,
         distance: 100,
         d_radius: 150,
         array: []
