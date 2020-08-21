@@ -69,7 +69,7 @@ img {
     margin-bottom: 10px;
 }
 
-.btns button, .btn {
+.btns button, .mdbtn {
     margin-bottom: 15px;
     position: relative;
     top: -10px;
@@ -90,7 +90,7 @@ img {
     
 }
 
-.btns button:hover, .btn:hover {
+.btns button:hover, .mdbtn:hover {
     background: #f6f6f6;
     color: #2988FF;
     background-color: #2988FF;
