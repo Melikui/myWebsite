@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/smiley.gif">
-    <title>学习中的小白</title>
-    <link rel="stylesheet" href="./css/smofang.css">
+    <title>test</title>
     <script src="./font/iconfont.js"></script>
     <script src="./js/jQuery.js"></script>
     <script src="./js/bg.js"></script>
@@ -15,9 +14,11 @@
     <script src="./editorMD/examples/js/zepto.min.js"></script>
     <script src="./editorMD/editormd.js"></script>
     <link rel="stylesheet" href="./css/index.css">
-    <base target="_blank">
+    
 
 </head>
+
+
 
 <body>
     <canvas id="bgCanvas"></canvas>
@@ -27,10 +28,10 @@
 
     <!-- article区域 -->
     <article id="container" class="layer clearfix">
-        <!-- article区域topBox部分 -->
-        <div class="topBox clearfix">
-            <!-- editor区域 -->
-            <div class="markdown-body editormd-preview-container">
+        <!-- article区域-左侧--部分 -->
+        <div class="leftBox fl clearfix">
+
+            <div id="markdownBody" class="markdown-body editormd-preview-container">
 
                 <h1 id="h1-heading-1"><a name="Heading 1" class="reference-link"></a><span
                         class="header-link octicon octicon-link"></span>Heading 1</h1>
@@ -108,10 +109,148 @@
                 <pre class="prettyprint linenums prettyprinted"
                     style=""><ol class="linenums"><li class="L0"><code class="lang-html"><span class="dec">&lt;!DOCTYPE html&gt;</span></code></li><li class="L1"><code class="lang-html"><span class="tag">&lt;html&gt;</span></code></li><li class="L2"><code class="lang-html"><span class="pln">    </span><span class="tag">&lt;head&gt;</span></code></li><li class="L3"><code class="lang-html"><span class="pln">        </span><span class="tag">&lt;mate</span><span class="pln"> </span><span class="atn">charest</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="pln"> </span><span class="tag">/&gt;</span></code></li><li class="L4"><code class="lang-html"><span class="pln">        </span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"keywords"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"Editor.md, Markdown, Editor"</span><span class="pln"> </span><span class="tag">/&gt;</span></code></li><li class="L5"><code class="lang-html"><span class="pln">        </span><span class="tag">&lt;title&gt;</span><span class="pln">Hello world!</span><span class="tag">&lt;/title&gt;</span></code></li><li class="L6"><code class="lang-html"><span class="pln">        </span><span class="tag">&lt;style</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="tag">&gt;</span></code></li><li class="L7"><code class="lang-html"><span class="pln">            body</span><span class="pun">{</span><span class="pln">font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">14px</span><span class="pun">;</span><span class="pln">color</span><span class="pun">:#</span><span class="lit">444</span><span class="pun">;</span><span class="pln">font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Microsoft Yahei"</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Tahoma</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Hiragino Sans GB"</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Arial</span><span class="pun">;</span><span class="pln">background</span><span class="pun">:#</span><span class="pln">fff</span><span class="pun">;}</span></code></li><li class="L8"><code class="lang-html"><span class="pln">            ul</span><span class="pun">{</span><span class="pln">list</span><span class="pun">-</span><span class="pln">style</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;}</span></code></li><li class="L9"><code class="lang-html"><span class="pln">            img</span><span class="pun">{</span><span class="pln">border</span><span class="pun">:</span><span class="pln">none</span><span class="pun">;</span><span class="pln">vertical</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln"> middle</span><span class="pun">;}</span></code></li><li class="L0"><code class="lang-html"><span class="pln">        </span><span class="tag">&lt;/style&gt;</span></code></li><li class="L1"><code class="lang-html"><span class="pln">    </span><span class="tag">&lt;/head&gt;</span></code></li><li class="L2"><code class="lang-html"><span class="pln">    </span><span class="tag">&lt;body&gt;</span></code></li><li class="L3"><code class="lang-html"><span class="pln">        </span><span class="tag">&lt;h1</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"text-xxl"</span><span class="tag">&gt;</span><span class="pln">Hello world!</span><span class="tag">&lt;/h1&gt;</span></code></li><li class="L4"><code class="lang-html"><span class="pln">        </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"text-green"</span><span class="tag">&gt;</span><span class="pln">Plain text</span><span class="tag">&lt;/p&gt;</span></code></li><li class="L5"><code class="lang-html"><span class="pln">    </span><span class="tag">&lt;/body&gt;</span></code></li><li class="L6"><code class="lang-html"><span class="tag">&lt;/html&gt;</span></code></li></ol></pre>
 
+
+
+
+
+
             </div>
+
         </div>
 
+        <!-- article区域--右侧--部分 -->
+        <div class="rightBox fr">
+
+            <!-- 搜索和导航栏目 -->
+            <div class="search-nav clearfix">
+                <div class="top">
+                    <input type="text" placeholder="JavaScript"><button class="btn">搜 索</button>
+                </div>
+                <!------- 笔记分类 ------->
+                <!-- Git笔记 -->
+                <h3>
+                    <span class="iconfont">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xuexi1"></use>
+                        </svg>
+                    </span>
+                    <i>Git&nbsp;笔记</i>
+                </h3>
+                <ul class="clearfix">
+                    <li><a href="#" onclick="Ajaxfun('./note/git.txt')">Git常用命令</a></li>
+                    <li><a href="">Git基本操作</a></li>
+                </ul>
+                <!-- webpack笔记 -->
+                <h3>
+                    <span class="iconfont">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xuexi1"></use>
+                        </svg>
+                    </span>
+                    <i>webpack&nbsp;笔记</i>
+                </h3>
+                <ul class="clearfix">
+                    <li><a href="">开发环境配置</a></li>
+                    <li><a href="">生产环境配置</a></li>
+                    <li><a href="">优化环境配置</a></li>
+                    <li><a href="">配置详解</a></li>
+                </ul>
+                <!-- HTML笔记 -->
+                <h3>
+                    <span class="iconfont">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xuexi1"></use>
+                        </svg>
+                    </span>
+                    <i>HTML&nbsp;笔记</i>
+                </h3>
+                <ul class="clearfix">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">jQuery</a></li>
+                    <li><a href="#">Bootstrap</a></li>
+                    <li><a href="#">Less</a></li>
+                    <li><a href="#">Sass</a></li>
+                </ul>
+                <!-- CSS笔记 -->
+                <h3>
+                    <span class="iconfont">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xuexi1"></use>
+                        </svg>
+                    </span>
+                    <i>CSS&nbsp;笔记</i>
+                </h3>
+                <ul class="clearfix">
+                    <li><a href="">旋转魔方</a></li>
+                    <li><a href="">扫雷游戏</a></li>
+                    <li><a href="">旋转照片墙</a></li>
+                </ul>
+                
+                
+
+
+
+            </div>
+
+            <div class="recommend clearfix">
+                <!-- 工具推荐 -->
+                <h3>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-jian"></use>
+                        </svg>
+                    </span>
+                    <i>工具推荐</i>
+                </h3>
+                <ul>
+                    <li><a href="https://www.npmjs.cn/">npm 中文文档 | npm 中文网</a></li>
+                    <li><a href="https://tool.lu/favicon/">favicon制作 - 在线工具</a></li>
+                    <li><a href="http://www.aigei.com/">爱给网_音效配乐_3D模型_视频素材_游戏素材_免费下载</a></li>
+                    <li><a href="https://www.caniuse.com/">Can I use... Support tables for HTML5, CSS3, etc</a></li>
+                    <li><a
+                            href="https://www.iconfont.cn/home/index?spm=a313x.7781069.1998910419.2">Iconfont-阿里巴巴矢量图标库</a>
+                    </li>
+                    <li><a href="https://developer.aliyun.com/mirror/NPM?from=tnpm">NPM镜像-NPM下载地址-NPM安装教程-阿里巴巴开源镜像站</a>
+                    </li>
+                    <li><a href="https://leetcode-cn.com/">力扣（LeetCode）官网 - 全球极客挚爱的技术成长平台</a></li>
+                    <li><a href="https://www.babeljs.cn/">Babel 中文网 · Babel - 下一代 JavaScript 语法的编译器</a></li>
+                    <li><a href="http://code.z01.com/emmet/">Emmet-HTML/CSS代码自动补全语法</a></li>
+                    <li><a href="https://cn.wordpress.org/download/">下载 | WordPress.org China 简体中文</a></li>
+                    <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference">JavaScript 参考 -
+                            JavaScript | MDN</a></li>
+                </ul>
+                <!-- 笔记推荐 -->
+                <h3>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-zuixin"></use>
+                        </svg>
+                    </span>
+                    <i>最新笔记</i>
+                </h3>
+                <ul>
+                    <li><a href="#">微信分享链接出现config:invalid signature</a></li>
+                    <li><a href="#">微信转发或分享朋友圈带缩略图、标题和描述</a></li>
+                    <li><a href="#">阿里云ECS服务器无法链接FTP之端口设置方法</a></li>
+                    <li><a href="#">静态页面实现微信分享带缩略图、标题和描述</a></li>
+                    <li><a href="#">Discuz！论坛上传头像提示“Access denied</a></li>
+                    <li><a href="#">IIS7、IIS8伪静态和301重定向文件web.confi</a></li>
+                    <li><a href="#">使用Loader-Helper安装sdfad fsd f安装Swoole</a></li>
+                    <li><a href="#">上传文件提示413 Request Entity Too Large</a></li>
+                    <li><a href="#">使用Loader-Helper安装sdfad fsd f安装Swoole</a></li>
+                    <li><a href="#">如何用.htaccess文件实现index.html跳</a></li>
+                </ul>
+                <!-- 资源推荐 -->
+            </div>
+
+
+        </div>
     </article>
+
+
+
+
 
     <!-- footer底部页脚部分 -->
     <script src="./js/Footer.js"></script>
@@ -119,6 +258,7 @@
 
     <script src="./js/webrunTime.js"></script>
     <script src="./js/wordsCount.js"></script>
+    <script src="./js/ajaxFunc.js"></script>
 
 </body>
 

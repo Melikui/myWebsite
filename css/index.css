@@ -278,25 +278,16 @@ canvas {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* ---article区域---------------------------------------------------------------- */
 /* -- article中间区域 -- */
-/* #container{
+#container{
+    width: 1190px;
     height: 100%;
-} */
+    margin-bottom: 10px;
+}
 /* -- article区域topBox部分 -- */
 .topBox{
     width: 100%;
-    margin-bottom: 10px;
     border-radius: 0;
     box-sizing: border-box;
     /* box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); */
@@ -486,6 +477,7 @@ canvas {
 
 /* <!-- 中间--左侧--部分 --> */
 #container .leftBox{
+    overflow: hidden;
     width: 880px;
     box-sizing: border-box;
 }
@@ -494,6 +486,7 @@ canvas {
 #container .leftBox .displayBox{
     width: 880px;
     overflow: hidden;
+    margin-top: 10px;
 }
 
 /* -- 魔方显示部分-- */
@@ -829,12 +822,13 @@ canvas {
 #container .rightBox{
     width: 300px;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 /* <!-- 搜索和导航栏目 --> */
 #container .rightBox .search-nav{
+    /* position: relative; */
     width: 260px;
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     border-radius: 3px;
     background-color: #fff;
 }

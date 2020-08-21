@@ -3841,6 +3841,7 @@
 /* ---------------------------------------------------------------------------------------------------------------- */
 
 .editormd-preview-container, .editormd-html-preview {
+  box-sizing: border-box;
   margin-top: 10px;
   text-align: left;
   font-size: 14px;
