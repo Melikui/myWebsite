@@ -19,12 +19,12 @@ document.write("                                    <use xlink:href=\"#icon-biji
 document.write("                                <\/svg>&nbsp;日志<\/a>");
 document.write("                        <\/li>");
 document.write("                        <li class=\"ele\">");
-document.write("                            <a href=\"#\"><svg class=\"icon\" aria-hidden=\"true\">");
+document.write("                            <a href=\".\/notes.html\"><svg class=\"icon\" aria-hidden=\"true\">");
 document.write("                                    <use xlink:href=\"#icon-biji\"><\/use>");
 document.write("                                <\/svg>&nbsp;笔记<\/a>");
 document.write("                        <\/li>");
 document.write("                        <li class=\"ele\">");
-document.write("                            <a href=\"#\"><svg class=\"icon\" aria-hidden=\"true\">");
+document.write("                            <a href=\".\/liuyan.html\"><svg class=\"icon\" aria-hidden=\"true\">");
 document.write("                                    <use xlink:href=\"#icon-liuyan2\"><\/use>");
 document.write("                                <\/svg>&nbsp;留言<\/a>");
 document.write("                        <\/li>");

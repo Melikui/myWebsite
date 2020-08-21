@@ -37,6 +37,7 @@ testEditor = editormd("test-editormd", {
         //this.resize("100%", 640);
     }
 });
+
 document.getElementById("submit").onclick = function () {
     let htmlCode = document.getElementsByClassName("editormd-preview-container")[0].innerHTML;
     let mdCode = testEditor.getMarkdown();
