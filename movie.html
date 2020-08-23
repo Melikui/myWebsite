@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>通过下拉菜单更换头像</title>
+        <script type="text/javascript" src="./js/jQuery.js"></script>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            body{
+                color: #ffffff;
+                text-align: center;
+                background: #4f3722 url('images/darkcurtain.jpg') repeat-x;
+            }
+            img{
+                border: none;
+                height: 1000px;
+            }
+            h3{
+                margin: 10px;
+                color:#FFFFFF;
+            }
+            .leftcurtain{
+                width: 50%;
+                height: 495px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+            }
+            .rightcurtain{
+                width: 51%;
+                height: 495px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 3;
+            }
+            .rightcurtain img, .leftcurtain img{
+                width: 100%;
+                height: 100%;
+            }
+            .box{
+                margin: 520px auto;
+                width: 300px;
+                height: 50px;
+                border: 10px solid;
+                border-radius: 5px;
+                border-color: rgba(184, 166, 8, 0.507) rgb(122, 89, 6) rgb(122, 89, 6) rgba(184, 166, 8, 0.507);
+                background-color: #B8860B;
+                box-shadow: 0 3px rgb(202, 151, 11);
+            }
+            .box:hover {background-color: #f1bc0d}
+            .box:active{
+                background-color: #B8860B;
+                box-shadow: 0 0px rgb(202, 151, 11);
+                transform: translateY(4px);
+
+            }
+            .rope{
+                color: white;
+                font-size: 30px;
+                line-height: 50px;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    
+    <body background="bg.png">
+        <h3>影厅</h3><hr>
+        <div class="leftcurtain"><img src="images/frontcurtain.jpg"></div>
+        <div class="rightcurtain"><img src="images/frontcurtain.jpg" alt=""></div>
+        <div class="box"><a class="rope" href="#">拉开帷幕，开始播放</a></div>
+        <script>
+            $(document).ready(function () {
+                var curtainopen = false;
+                $('.rope').click(function(){
+                    $(this).blur();
+                    if(curtainopen == false){
+                        $(this).text('关闭帷幕，播放结束');
+                        $('.leftcurtain').animate({width:'60px'},2000);
+                        $(".rightcurtain").animate({width:'60px'},2000 );
+                        curtainopen = true;
+                    }else{
+                        $(this).text('拉开帷幕，开始播放');
+                        $('.leftcurtain').animate({width:'50%'},2000);
+                        $(".rightcurtain").animate({width:'51%'},2000 );
+                        curtainopen = false;
+                    }
+                });
+                
+            });
+    
+        </script>
+    
+    
+    </body>
+    
+    </html>
