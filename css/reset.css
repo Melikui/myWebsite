@@ -6,11 +6,8 @@ body {
     font: 12px/1.5 sans-serif, arial, 'Hiragino Sans GB', '\5b8b\4f53', tahoma;
     color: #3c3c3c;
     background-color: #f4f4f4;
-    /* background-color: #f9f9f9; */
 }
-div{
-    border-radius: 3px;
-}
+
 .layer {
     width: 1190px;
     margin: 0 auto;

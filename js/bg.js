@@ -14,7 +14,7 @@ $(function () {
     };
 
     var dots = {
-        nb: (canvas.width + canvas.width) / 6,
+        nb: 300,
         distance: 100,
         d_radius: 150,
         array: []

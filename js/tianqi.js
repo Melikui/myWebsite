@@ -45,7 +45,7 @@ function sendAjax(url) {
 // async 和 await 测试
 async function main() {
     // 发送 Ajax 请求
-    let tianqi = await sendAjax('http://www.tianqiapi.com/api?version=v9&appid=23035354&appsecret=8YvlPNrz');
+    let tianqi = await sendAjax('https://tianqiapi.com/api?version=v1&appid=42999496&appsecret=0i7tBj2Q');
     var txt = JSON.parse(tianqi);
     function getEle(ele) {
         return document.getElementsByClassName(ele)[0];
@@ -57,13 +57,13 @@ async function main() {
         tqwea = getEle('tqwea'),
         tqwin = getEle('tqwin');
     // 地址
-    tqdz.innerHTML = '中国 - 安徽 - ' + txt.aqi.city;
+    tqdz.innerHTML = '中国 - 安徽 - ' + txt.city;
     // 空气水平
     tqkqsp.innerHTML = '空气水平: ' + txt.data[0].air_level;
     // 建议
     tqtips.innerHTML = txt.data[0].air_tips;
     // 温度
-    tqwd.innerHTML = txt.data[0].tem + '℃';
+    tqwd.innerHTML = txt.data[0].tem;
     // 天气
     tqwea.innerHTML = txt.data[0].wea;
     // 风向
@@ -73,7 +73,7 @@ async function main() {
     var len = tqdays.length;
     var str = '';
     for (var i = 0; i < len; i++) {
-        str += '<p>' + txt.data[i].day + '</p>' + '<p>' + txt.data[0].tem + '℃' + '</p>' + '<p>' + txt.data[i].wea + '</p>' + '<p>' + txt.data[i].win[0] + '</p>' + '<p>' + txt.data[i].win_speed + '</p>';
+        str += '<p>' + txt.data[i].day + '</p>' + '<p>' + txt.data[0].tem + '</p>' + '<p>' + txt.data[i].wea + '</p>' + '<p>' + txt.data[i].win[0] + '</p>' + '<p>' + txt.data[i].win_speed + '</p>';
         tqdays[i].innerHTML = str;
         str = '';
     }

@@ -36,7 +36,6 @@ canvas {
 #header{
     width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
-    background-size: 100% 30px;
     padding-top: 6px;
     position: relative;
 }
@@ -162,6 +161,8 @@ canvas {
     line-height: 40px;
     font-size: 20px;
 }
+
+/* 留言部分 */
 .liuyan{
     position: relative;
     width: 800px;
@@ -170,6 +171,7 @@ canvas {
     margin: 20px auto;
     box-sizing: border-box;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
 }
 .ly-p{
     padding: 15px 10px 10px 10px;
@@ -672,39 +674,216 @@ canvas {
     color: white;
 }
 
-/* 项目列表部分 */
+/* 导航列表部分 */
 .leibie{
     height: 100%;
     width: 880px;
-    background-color: #fff;
+    /* background-color: #fff; */
     margin: 10px 0;
+    border-radius: none;
+    border-left: 5px solid #999;
 }
 .leibie ul{
     display: flex;
     flex-wrap: wrap;
-    padding: 5px;
+    justify-content: space-around;
+    padding: 10px;
+    position: relative;
 }
 .leibie ul li{
     position: relative;
     float: left;
     box-sizing: border-box;
-    width: 164px;
-    height: 100px;
-    background-color: white;
-    border-radius: 5px;
+    width: 120px;
+    height: 40px;
     margin: 5px;
-    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s linear;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.5);
+    text-align: center;
 
 }
 .leibie ul li:hover{
-    box-shadow:  0px 0px 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    left: 2px;
+    top: 2px;
 }
+.leibie ul li a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+
+}
+.leibie ul li:nth-of-type(1) a{
+    background-color: rgba(6, 129, 245, 0.6);
+    color: #fff;
+}
+.leibie ul li:nth-of-type(1) a:hover{
+    background-color: rgba(1, 127, 245, 0.9);
+}
+.leibie ul li:nth-of-type(2) a{
+    background-color: rgba(9, 250, 21, 0.6);
+    color: #666;
+}
+.leibie ul li:nth-of-type(2) a:hover{
+    background-color: rgba(9, 250, 21, 0.9);
+}
+.leibie ul li:nth-of-type(3) a{
+    background-color: rgba(247, 11, 247, 0.6);
+    color: #fff;
+}
+.leibie ul li:nth-of-type(3) a:hover{
+    background-color: rgba(247, 11, 247, 0.9);
+}
+.leibie ul li:nth-of-type(4) a{
+    background-color: rgba(249, 253, 5, 0.6);
+    color: #666;
+}.leibie ul li:nth-of-type(4) a:hover{
+    background-color: rgba(249, 253, 5, 0.9);
+}
+.leibie ul li:nth-of-type(5) a{
+    background-color: rgba(245, 6, 6, 0.6);
+    color: #fff;
+}
+.leibie ul li:nth-of-type(5) a:hover{
+    background-color: rgba(245, 6, 6, 0.9);
+}
+.leibie ul li:nth-of-type(6) a{
+    background-color: rgba(250, 103, 6, 0.6);
+    color: #666;
+}
+.leibie ul li:nth-of-type(6) a:hover{
+    background-color: rgba(250, 103, 6, 0.9);
+}
+
 .rizhi{
+    box-sizing: border-box;
+    margin-top: 10px;
     width: 880px;
-    height: 300px;
+    padding: 20px;
     background-color: #fff;
 }
+.rizhi .biaoqian{
+    width: 100%;
+    margin-bottom: 6px;
+}
+.rizhi .biaoqian span{
+    line-height: 30px;
+    padding: 5px 10px;
+    margin-right: 6px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #999;
+}
+.rizhi .biaoqian span:nth-of-type(1){
+    background-color: #FF5E5C;
+}
+.rizhi .biaoqian span:nth-of-type(2){
+    background-color: #19B5FE;
+}
+.rizhi .biaoqian span:nth-of-type(3){
+    background-color: #1AC756;
+}
+.rizhi .biaoqian span:nth-of-type(4){
+    background-color: #F669F6;
+}
+.rizhi .biaoqian span:nth-of-type(5){
+    background-color: #F8A066;
+}
+
+.rizhi h3{
+    font-weight: normal;
+    margin: 6px 0;
+}
+.rizhi h3 a{
+    font-size: 18px;
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+#container .rizhi h3 a:hover{
+    color:#2988FF;
+}
+.rizhi .rz-img{
+    margin: 5px 0;
+}
+.rizhi .rz-img ul{
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+.rizhi .rz-img ul li{
+    background-color: #555;
+    width: 200px;
+    height: 120px;
+    margin: 6px 6px 0 0;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.rizhi .rz-img ul li img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.rizhi .rz-img ul li img:hover{
+    width: 240px;
+    height: 144px;
+    left: -20px;
+    top: -12px;
+}
+.rizhi p{
+    margin: 6px 0;
+    font-size: 15px;
+    text-indent: 2em;
+    line-height: 25px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.rizhi .author{
+    width: 100%;
+    height: 36px;
+    margin-top: 15px;
+}
+.rizhi .author img{
+    float: left;
+    border-radius: 50%;
+    border: 1px solid #999;
+    padding: 1px;
+    width: 32px;
+    height: 32px;
+    vertical-align: center;
+    margin-right: 5px;
+}
+.rizhi .author span{
+    padding: 0 3px;
+    margin-right: 10px;
+    line-height: 36px;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 中间博客部分 */
